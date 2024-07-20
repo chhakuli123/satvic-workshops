@@ -16,3 +16,4 @@ export {
   SheetTitle,
   SheetDescription,
 } from './Sheet';
+export { Button } from './Button';
