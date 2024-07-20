@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss';
 
+import { colors } from './src/config/index';
+
 const config = {
   darkMode: ['class'],
   content: [
@@ -18,6 +20,9 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        ...colors,
+      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
