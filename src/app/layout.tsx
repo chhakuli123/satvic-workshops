@@ -3,7 +3,8 @@ import type { Metadata, Viewport } from 'next';
 import '@/styles/globals.css';
 
 import { siteConfig } from '@/config/site';
-import { inter } from '@/lib/fonts';
+import { nunito } from '@/lib/fonts';
+import Navbar from '@/components/layout/navbar/Navbar';
 
 export const metadata: Metadata = {
   title: {
@@ -25,7 +26,8 @@ type RootLayoutProps = Readonly<{
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={`min-h-screen antialiased ${inter.className}`}>
+      <body className={`min-h-screen antialiased ${nunito.className}`}>
+        <Navbar />
         {children}
       </body>
     </html>
