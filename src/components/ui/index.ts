@@ -17,3 +17,11 @@ export {
   SheetDescription,
 } from './Sheet';
 export { Button } from './Button';
+export {
+  type CarouselApi,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from './Carousel';
