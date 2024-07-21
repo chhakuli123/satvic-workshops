@@ -13,6 +13,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui';
 
+import JoinChallenge from './JoinChallenge';
 import { Workshop } from './workshopTypes';
 
 const WorkshopCard: React.FC<{ workshop: Workshop }> = ({ workshop }) => (
@@ -83,7 +84,7 @@ const WorkshopCard: React.FC<{ workshop: Workshop }> = ({ workshop }) => (
         {workshop.description}
       </p>
 
-      <div className="flex gap-4">
+      <div className="flex 2xl:gap-4">
         <div className="flex items-center gap-[14px] rounded-xl border border-base-100 px-4 py-5 text-xs shadow-[0_4px_20px_rgba(43,43,43,0.08)]">
           <Image
             src="/assets/icons/calender.svg"
@@ -141,9 +142,7 @@ const WorkshopCard: React.FC<{ workshop: Workshop }> = ({ workshop }) => (
         </div>
 
         <div className="flex items-center gap-4">
-          <Button className="px-8 py-2.5 text-[18px]">
-            Join the challenge
-          </Button>
+          <JoinChallenge workshop={workshop} />
           <Button variant="outline" className="text-[18px]">
             View details
           </Button>
