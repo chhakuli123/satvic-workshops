@@ -11,6 +11,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui';
 
+import JoinChallenge from './JoinChallenge';
 import { Workshop } from './workshopTypes';
 
 const MobileWorkshopCard: React.FC<{ workshop: Workshop }> = ({ workshop }) => (
@@ -100,17 +101,18 @@ const MobileWorkshopCard: React.FC<{ workshop: Workshop }> = ({ workshop }) => (
     </div>
 
     <div className="flex items-center justify-between p-4 shadow-[0_-4px_20px_rgba(43,43,43,0.06)]">
-      <Button variant="ghost" className="">
+      <Button variant="ghost" className="p-0">
         View details
       </Button>
-      <Button variant="default" className="h-10 px-4 py-2">
-        Join challenge
-        <div className="w-6 rotate-90 border bg-[#F3F3F3] opacity-50"></div>
-        <span className="flex items-center">
+      <div className="flex h-10 items-center rounded-xl bg-primary-500 px-2">
+        <JoinChallenge workshop={workshop} />
+
+        <span className="w-6 rotate-90 border bg-[#F3F3F3] opacity-50"></span>
+        <span className="flex items-center text-white">
           <MdOutlineCurrencyRupee size={18} />
           {workshop.price}{' '}
         </span>
-      </Button>
+      </div>
     </div>
   </div>
 );
