@@ -1,5 +1,13 @@
 import HeroSection from './section/HeroSection';
+import WorkshopCards from './section/workshop/WorkshopCards';
 
-const Homepage = () => <HeroSection />;
+const Homepage = () => {
+  return (
+    <>
+      <HeroSection />
+      <WorkshopCards />
+    </>
+  );
+};
 
 export default Homepage;
